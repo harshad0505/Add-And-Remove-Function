@@ -16,6 +16,7 @@ const [width,setWidth]=useState(50);
 const handelAddClick=()=>{
   
     const update=[...photo,{id:Math.floor(Math.random()*1000),
+      photo:iphone,width},]
       
       setphoto(update);
       setWidth(width+40)
