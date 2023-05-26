@@ -17,6 +17,7 @@ export default function () {
           <Link className="link">Downlaod</Link>
         </li>
         <li className="li">
+          {/* Here we Showing the total items in array */}
           <Link className="link">Counter : {photo ? photo.length : 0}</Link>
         </li>
         <li className="li">

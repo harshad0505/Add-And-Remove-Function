@@ -21,6 +21,7 @@ function Provider({ children }) {
   const [width, setWidth] = useState(50);
 
   const handelAddClick = () => {
+    //On Click on Add button this will add New Element to the Array With unique Id and also the Width
     const update = [
       ...photo,
       { id: Math.floor(Math.random() * 1000), photo: img, width },
@@ -30,7 +31,10 @@ function Provider({ children }) {
     setphoto(update);
     setWidth(width + 40);
   };
+
+  //To Remove the Photo From the Array When Button Is click
   const handelDeleteClick = (e) => {
+    //Making copy of array so the Origanal Array wont dirctly change
     const $photo = [...photo];
     if (photo.length > 0) {
       const newPhoto = $photo.pop();
@@ -39,6 +43,7 @@ function Provider({ children }) {
     }
   };
 
+  //Data To share across the Components
   const valuetoshare = {
     handelAddClick,
     photo,
@@ -48,7 +53,8 @@ function Provider({ children }) {
   };
 
   return (
-    <photoContext.Provider value={valuetoshare}>
+    //this will share the data across the whole component
+    <photoContext.Provider value={valuetoshare}>  
       {children}
     </photoContext.Provider>
   );

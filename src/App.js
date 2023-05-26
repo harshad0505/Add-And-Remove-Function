@@ -23,10 +23,13 @@ function App() {
       <div className="compo">
         <PhotoLIst />
       </div>
+      
       <div className="btn">
+        {/* THis Onclick will Add the Object to the arrya */}
         <button className="btnn Add" onClick={handelAddClick}>
           ADD
         </button>
+          {/* THis Onclick will Remove the Object to the arrya */}
         <button className="btnn Remove" onClick={handelDeleteClick}>
           REMOVE
         </button>

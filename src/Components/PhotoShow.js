@@ -2,6 +2,7 @@ import React from "react";
 
 export default function PhotoShow({ photos }) {
   return (
+    //Here Displaying the Whole Content 
     <>
       <div className="container" key={photos.id}>
         <img
